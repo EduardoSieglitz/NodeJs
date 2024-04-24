@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter</title>
+</head>
+<body>
+    <h3>Inverte Palavra</h3>
+    <p>Digite Frase: <input type="text" id="texto"></p>
+    <p>Invertida: <input type="text" id="resultado" disabled></p>
+    <p><button id="processar">Processar</button>
+        <button id="voltar">Voltar</button>
+    </p>
+</body>
+<script>
+    var btn = document.getElementById("processar");
+    btn.addEventListener("click", () => {
+        var texto = document.getElementById("texto").value;
+        var reverso = texto.split("").reverse().join("");
+        document.getElementById("resultado").value = reverso;
+    })
+    var voltar = document.getElementById("voltar");
+    voltar.addEventListener("click", () => {
+        window.location.assign("/")
+    })
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+</head>
+<body>
+    <div align="center">
+        <button id="mostra_maior">Mostra Maior</button>
+        <br><br>
+        <button id="inverte_palavra">Inverte Palavra</button>
+    </div>
+</body>
+<script>
+    var mostra_maior = document.getElementById("mostra_maior");
+    mostra_maior.addEventListener("click", () => {
+        window.location.assign("/mostra_maior");
+    })
+    var inverte_palavra = document.getElementById("inverte_palavra");
+    inverte_palavra.addEventListener("click", () => {
+        window.location.assign("/inverte_palavra");
+    })
+</script>
+
+</html>

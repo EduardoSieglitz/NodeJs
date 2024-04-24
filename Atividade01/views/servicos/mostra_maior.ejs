@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostra Maior</title>
+</head>
+
+<body>
+    <h3>Maior número</h3>
+    <p>Digite primeiro número: <input type="text" id="num1" size="5"></p>
+    <p>Digite segundo número: <input type="text" id="num2" size="5"></p>
+    <p>Digite terceiro número: <input type="text" id="num3" size="5"></p>
+    <p>Maior Número: <input type="text" id="resultado" disabled></p>
+    <p><button id="processar">Processar</button>
+        <button id="voltar">Voltar</button>
+    </p>
+</body>
+<script>
+    var btn = document.getElementById("processar");
+    btn.addEventListener("click", () => {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var num3 = parseInt(document.getElementById("num3").value);
+
+        if (num1 > num2 && num1 > num3) {
+            max = "Primeiro"
+        } else if (num2 > num1 && num2 > num3) {
+            max = "Segundo"
+        } else {
+            max = "Terceiro"
+        }
+        document.getElementById("resultado").value = max;
+    })
+    var voltar = document.getElementById("voltar");
+    voltar.addEventListener("click", () => {
+        window.location.assign("/")
+    })
+</script>
+</html>
