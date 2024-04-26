@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <h1>Soma dos valores</h1>
+    <input type="text" id="num1" value="<%= numero1 %>">
+    <input type="text" id="num2" value="<%= numero2 %>">
+    <input type="text" id="num3" value="<%= numero3 %>">
+    <input type="text" id="Resultado" disabled>
+    <button type="button" onclick="Soma()">Executar</button>
+    <button type="button" onclick="Voltar()">Voltar</button>
+    <script>
+        function Soma(){
+        var num1 = parseInt(document.getElementById("num1").value), num2 = parseInt(document.getElementById("num2").value),
+        num3 = parseInt(document.getElementById("num3").value);
+        var Soma = num1 + num2 + num3;
+        document.getElementById("Resultado").value = Soma;
+        }
+        function Voltar(){
+        window.location.href ="/"
+    }
+    </script>
+</body>
+</html>
