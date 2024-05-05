@@ -2,6 +2,7 @@ const { render } = require("ejs");
 const express = require("express");
 const app = express();
 const conexao = require("./database/dados");
+const Pergunta = require("./database/ControleCadastro.js")
 conexao.authenticate().then(() =>{
     console.log("Conexão foi bem sucedida")
 }).catch((msgErro)=>{
