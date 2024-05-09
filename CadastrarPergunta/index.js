@@ -21,7 +21,9 @@ app.get("/",(req, res)=>{
 app.get("/perguntar",(req, res)=>{
     res.render("perguntas/perguntar");
 });
-
+app.get("/verperguntas",(req, res)=>{
+    res.render("perguntas/verperguntas");
+})
 app.post("/salvarpergunta", (req, res)=>{
 var titulo = req.body.titulo;
 var descricao = req.body.descricao;

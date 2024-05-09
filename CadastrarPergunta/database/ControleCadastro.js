@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const conexao = require("./dados.js");
-const Pergunta = conexao.define("td_pergunta", {
+const Pergunta = conexao.define("pergunta", {
     id:{
         type:Sequelize.INTEGER,
         autoIncrement: true,
