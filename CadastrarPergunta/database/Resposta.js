@@ -1,20 +1,20 @@
 const Sequelize = require("sequelize");
 const conexao = require("./dados.js");
-const Pergunta = conexao.define("pergunta", {
-    id:{
+const Resposta = conexao.define("resposta", {
+    id_resposta:{
         type:Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    titulo:{
+    corpo:{
         type:Sequelize.STRING,
         allowNull: false,
     },
-    descricao:{
-        type:Sequelize.TEXT,
+    id_pergunta:{
+        type:Sequelize.INTEGER,
         allowNull: false,
     },
 });
-Pergunta.sync();
-module.exports = Pergunta;
+Resposta.sync();
+module.exports = Resposta;
