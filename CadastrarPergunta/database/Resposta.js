@@ -11,7 +11,7 @@ const Resposta = conexao.define("resposta", {
         type:Sequelize.STRING,
         allowNull: false,
     },
-    id_pergunta:{
+    pergunta_id:{
         type:Sequelize.INTEGER,
         allowNull: false,
     },

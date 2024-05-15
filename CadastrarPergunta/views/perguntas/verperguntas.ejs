@@ -15,17 +15,17 @@
  <hr> 
  <a href="/perguntar" class="btn btn-primary">Perguntar</a> 
  <hr> 
- <!-----Aqui loop ----> 
+ <% perguntas.forEach(questoes =>{ %>
  <br /> 
  <div class="card"> 
  <div class="card-body"> 
- <h3>Aqui vai o texto do título</h3> 
+ <h3><%= questoes.titulo %></h3> 
  </div> 
  <div class="card-footer"> 
-    <a href="resposta"><button class="btn btn-primary">Responder</button></a>
+    <a href="responder/<%= questoes.id_pergunta %>"><button class="btn btn-primary">Responder</button></a>
+ </div>
  </div> 
- </div> 
- <!----Final do loop --> 
+ <% }) %>
  </div> 
  </body> 
  <script src="/js/query-3.5.1.slim.min.js"></script> 

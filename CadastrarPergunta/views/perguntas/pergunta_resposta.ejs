@@ -11,9 +11,25 @@
  <body> 
  <div class="container"> 
  <hr> 
- <h1>Titulo Perguta<h1> 
- <p> Descrição da pergunta<p> 
+ <h1><%= questao.titulo %><h1> 
+ <p><%= questao.descricao %><p>
+    <form action="/responder/" method="post">
+        <label for="">Resposta</label>
+        <textarea class="form-control" name="corpo" placeholder="Digite sua resposta"></textarea>
+        <input type="hidden" value="<%= questao.id_pergunta %>" name="Perguntaid">
+        <button type="submit" class="btn btn-primary">Responder</button>
+    </form> 
  <hr> 
+ <h3>Resposta</h3>
+ <% respondido.forEach(respondido=>{ %>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <p><%= respondido.corpo %></p>
+        </div>
+
+    </div>
+    <% }) %>
  </body> 
  <script src="/js/query-3.5.1.slim.min.js"></script> 
  <script src="/js/popper.min.js"></script> 
