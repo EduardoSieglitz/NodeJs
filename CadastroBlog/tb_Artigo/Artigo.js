@@ -1,7 +1,8 @@
 const Sequelize = require("sequelize"),
 Conexao = require("../database/dados"),
-Artigo = Conexao.define("Categoria",{
-    id_Artigo:{
+Categoria = require("../tb_Categoria/Categoria"),
+Artigo = Conexao.define("Artigo",{
+    id_artigo:{
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement : true,
@@ -15,6 +16,18 @@ Artigo = Conexao.define("Categoria",{
         type: Sequelize.STRING,
         allowNull: false,
     },
+    body:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    categoria_id:{
+        type: Sequelize.TEXT,
+        allowNull: false,
+    },
+});
+Categoria.hasMany(Artigo,{
+    foreignKey : 'td_categoria',
+    as : 'artigo_id'
 });
 Artigo.sync();
 module.exports = Artigo;
