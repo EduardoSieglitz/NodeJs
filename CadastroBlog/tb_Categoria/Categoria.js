@@ -16,5 +16,4 @@ Categoria = Conexao.define("Categoria",{
         allowNull: false,
     },
 });
-Categoria.sync();
 module.exports = Categoria;

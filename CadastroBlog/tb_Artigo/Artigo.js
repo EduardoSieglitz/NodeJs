@@ -21,7 +21,7 @@ Artigo = Conexao.define("Artigo",{
         allowNull: false,
     },
     categoria_id:{
-        type: Sequelize.TEXT,
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
 });
@@ -29,5 +29,4 @@ Categoria.hasMany(Artigo,{
     foreignKey : 'td_categoria',
     as : 'artigo_id'
 });
-Artigo.sync();
 module.exports = Artigo;

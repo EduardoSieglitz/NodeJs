@@ -3,6 +3,7 @@ app = express(),
 Conexao = require("./database/dados"),
 Categoria = require("./tb_Categoria/Categoria"),
 Artigo = require("./tb_Artigo/Artigo");
+const cadastro = require("./tb_Categoria/Controle");
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
@@ -16,6 +17,7 @@ Conexao.authenticate().then(()=>{
 app.get("/", (req, res)=>{
     res.render("primeiro");
 });
+app.use("/", cadastro);
 
 app.listen(3000, ()=>{
     console.log("Ok");
