@@ -1,24 +1,27 @@
-const express = require("express"),
+const express = require('express'),
 app = express(),
-Conexao = require("./database/dados"),
-Categoria = require("./tb_Categoria/Categoria"),
-Artigo = require("./tb_Artigo/Artigo");
-const cadastro = require("./tb_Categoria/Controle");
+conexao = require('./database/basedados'),
+Categoria = require('./cont_categoria/categoria'),
+Artigo = require('./cont_artigo/artigo'),
+controleCategoria = require('./cont_categoria/controleCategoria'),
+controleArtigo = require("./cont_artigo/controleArtigo");
+
+app.use("/", controleCategoria);
+app.use("/", controleArtigo);
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
 
-Conexao.authenticate().then(()=>{
-    console.log("Tudo ok");
-}).catch((erro)=>{
-    console.log(erro);
-});
-
-app.get("/", (req, res)=>{
+app.get("/", (req, res) => {
     res.render("primeiro");
 });
-app.use("/", cadastro);
 
-app.listen(3000, ()=>{
-    console.log("Ok");
+conexao.authenticate().then(() => {
+    console.log("Conexão com o banco sucesso")
+}).catch((errMsg) => {
+    console.log(errMsg);
+});
+
+app.listen(3000, () => {
+    console.log("SERVIDOR RODANDO")
 });

@@ -1,0 +1,45 @@
+<%- include ("../partials/header.ejs") %>
+  <%- include ("../partials/navbar.ejs") %>
+    <div class="container">
+      <hr>
+      <h2>Artigos</h2>
+      <a class="btn btn-success" href="/novoartigo">Criar novo artigo</a>
+      <hr>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Título</th>
+            <th>Slug</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% artigo.forEach((artigs)=>{%>
+          <tr>
+            <td> <%= artigs.id_artigo %></td>
+            <td> <%= artigs.titulo %></td>
+            <td> <%= artigs.slug %></td>
+            <td> <%= artigs.categoria.titulo %></td>
+            <td>
+              <form method="POST"action="deletaartigo"style="display: inline;" onsubmit="confirmaDeleta(event, this)">
+                <input type="hidden" name="id" value="<%= artigs.id_artigo %>">
+                <button class="btn btn-danger">Deletar</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <%- include ("../partials/footer.ejs") %>
+    <script>
+      function confirmaDeleta(event, form){
+        event.preventDefault();
+        let decisao = confirm("Confirma exclusão");
+        if(decisao){
+          form.submit();
+        }
+      }
+    </script>

@@ -1,0 +1,50 @@
+<%- include ("../partials/header.ejs") %>
+  <%- include ("../partials/navbar.ejs") %>
+    <div class="container">
+      <hr />
+      <h2>Categorias</h2>
+      <a class="btn btn-success" href="/novo ">Criar nova categoria</a>
+      <hr />
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Título</th>
+            <th>Slug</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% categoria.forEach((categs)=>{ %>
+            <tr>
+              <th>
+                <%= categs.id_categoria %>
+              </th>
+              <th>
+                <%= categs.titulo %>
+              </th>
+              <th>
+                <%= categs.slug %>
+              </th>
+              <th>
+                <a href="editacateg/<%= categs.id_categoria %>" class="btn btn-warning">Editar</a>
+                <form method="POST" action="deletacateg" style="display: inline" onsubmit="confirmaDeleta(event,this)">
+                  <input type="hidden" name="id" value="<%= categs.id_categoria %>" />
+                  <button class="btn btn-danger">Deletar</button>
+                </form>
+              </th>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <%- include ("../partials/footer.ejs") %>
+      <script>
+        function confirmaDeleta(event, form) {
+          event.preventDefault();
+          var decisao = confirm("Confirma Exclusão ?");
+          if (decisao) {
+            form.submit();
+          }
+        }
+      </script>
