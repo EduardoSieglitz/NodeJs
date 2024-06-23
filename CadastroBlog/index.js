@@ -13,7 +13,9 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 
 app.get("/", (req, res) => {
-    res.render("primeiro");
+    Artigo.findAll().then((artigos)=>{
+        res.render("primeiro",{artigos});
+    })
 });
 
 conexao.authenticate().then(() => {

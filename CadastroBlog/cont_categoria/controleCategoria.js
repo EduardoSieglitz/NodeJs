@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const slugify = require('slug');
-const Categoria = require('./categoria')
+const Categoria = require('./categoria');
 
 router.use(bodyParser.urlencoded({ extended: true }))
 
