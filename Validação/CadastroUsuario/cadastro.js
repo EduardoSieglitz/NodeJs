@@ -1,6 +1,6 @@
 const sequelize = require("sequelize"),
-conexao = require("./cadastroControle"),
-usuario = conexao.define("ususario",{
+conexao = require("../database/dados"),
+usuario = conexao.define("usuario",{
     id_usuario:{
         type: sequelize.INTEGER,
         allowNull: false,
@@ -9,7 +9,7 @@ usuario = conexao.define("ususario",{
     },
     nome:{
         type: sequelize.STRING,
-        alowNull: false
+        allowNull: false,
     },
 });
 usuario.sync();
