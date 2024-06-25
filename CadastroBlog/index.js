@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.get("/", (req, res) => {
     Artigo.findAll().then((artigos)=>{
         res.render("primeiro",{artigos});
-    })
+    });
 });
 
 conexao.authenticate().then(() => {
