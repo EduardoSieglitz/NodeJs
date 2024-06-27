@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <label for="">Cadastro</label>
+    </div>
+    <form action="/Cadastro" method="post" align="center">
+      <input type="text" name="nome" id="nome" placeholder="Nome">
+      <br>
+      <input type="text" name="email" id="email" placeholder="Email">
+      <br>
+      <input type="text" name="senha" id="senha" placeholder="Senha">
+      <br>
+      <label for="">Data de Nascimento</label>
+      <br>
+      <select name="dia">
+        <div class="date">
+          <script>
+            for (var d = 1; d < 31; d++) {
+              document.write("<option>" + d + "</option>")
+            }
+          </script>
+      </select>
+
+      <select name="mes">
+        <script>
+          for (var m = 1; m < 12; m++) {
+            document.write("<option>" + m + "</option>")
+          }
+        </script>
+      </select>
+
+      <select name="ano">
+        <script>
+          for (var a = 2024; a >= 1900; a--) {
+            document.write("<option>" + a + "</option>")
+          }
+        </script>
+      </select>
+      <br>
+      <label for="">Gênero</label>
+      <br>
+      <input type="radio" name="sexo" value="1">
+      <label for="">Masculino</label>
+      <br>
+      <input type="radio" name="sexo" value="2">
+      <label for="">Feminino</label>
+      <br>
+      <button>Cadastrar</button>
+    </form>
+    <a href="/">
+      <button>Voltar</button>
+    </a>
+  </div>
+</body>
+
+</html>
