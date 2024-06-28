@@ -4,42 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Document</title>
 </head>
 <style>
     body {
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        padding: 0;
-        margin: 0;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-    .erro {
-        color: brown;
-    }
-    button{
-        width: 150px;
+    a {
+        font-size: 30px;
+        text-decoration: none;
+        color: rgb(68, 42, 234);
     }
 </style>
 
 <body>
-    <center>
-        <h1>Cadastro de usuario</h1>
-        <hr>
-    </center>
-    <fieldset>
-        <legend>Cadastro de Usuario</legend>
-        <form action="/cadastro" method="post">
-            <input type="text" name="nome" id="nome">
-            <% if(typeof alert !="undefined" ){ %>
-                <% alert.forEach((error)=>{ %>
-                    <div class="erro">
-                        <%= error.msg %>
-                    </div>
-                    <% }) %>
-                        <% } %>
-                            <button type="submit">Cadastrar-se</button>
-        </form>
-    </fieldset>
+    <div class="container">
+        <a href="/cadastro">Cadastro</a>
+    </div>
 </body>
 
 </html>
