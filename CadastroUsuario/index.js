@@ -37,7 +37,7 @@ app.post("/Cadastro", (req, res) => {
       senha: senhaForm,
       datanascimento: nascimento,
       sexo: sexoForm
-    }).then(()=>{
+    }).then(() => {
       res.redirect("/");
     });
 });

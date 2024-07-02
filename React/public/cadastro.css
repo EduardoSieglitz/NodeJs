@@ -1,0 +1,62 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(253, 254, 255);
+}
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlecadastro {
+    width: 25vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.controlecadastro input {
+    width: 200px;
+    height: 25px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.controlecadastro button {
+    width: 180px;
+    height: 35px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.input {
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 10vh;
+}
+
+.hr {
+    width: 100%;
+}
