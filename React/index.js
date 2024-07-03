@@ -2,7 +2,9 @@ const express = require("express"),
 app = express(),
 conexao = require("./database/dados"),
 usuario = require("./CadastroCliente/tb_cliente"),
-usuariocontrole = require("./CadastroCliente/controleCliente")
+usuariocontrole = require("./CadastroCliente/controleCliente"), 
+react = require("react");
+
 
 
 conexao.authenticate().then(()=>{
@@ -18,16 +20,8 @@ app.get("/", (req, res)=>{
     res.render("index");
 });
 
-app.get("/login", (req, res)=>{
-    res.render("login");
-});
-
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
-});
-
-app.get("/tabela", (req, res)=>{
-    res.render("tabela");
 });
 
 app.use("/", usuariocontrole)

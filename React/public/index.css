@@ -6,7 +6,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: gb(253, 254, 255);
+    background-color: rgb(253, 254, 255);
 }
 
 .container {

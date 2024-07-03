@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
+    <link rel="stylesheet" href="tabela.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <table border="1px">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Data Nascimento</th>
+                <th>Editar</th>
+                <th>Deletar</th>
+            </tr>
+            <% client.forEach((clientes)=>{ %>
+                <tr>
+                    <th>
+                        <%= clientes.nome %>
+                    </th>
+                    <th>
+                        <%= clientes.cpf %>
+                    </th>
+                    <th>
+                        <%= clientes.telefone %>
+                    </th>
+                    <th>
+                        <%= clientes.email %>
+                    </th>
+                    <th>
+                        <%= clientes.datanascimento %>
+                    </th>
+                    <th><a href="editar/<%= clientes.id %>">Editar</a></th>
+                    <th><a href="/deletar">Deletar</a></th>
+                    <% }); %>
+                </tr>
+        </table>
+    </div>
 </body>
+
 </html>

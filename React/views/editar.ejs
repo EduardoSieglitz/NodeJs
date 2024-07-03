@@ -4,31 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
+    <title>Update</title>
+    <link rel="stylesheet" href="/cadastro.css">
 </head>
 
 <body>
-    <form action="/cadastroCliente" method="post">
+    <form action="/update" method="post">
         <div class="container">
             <div class="controlecadastro">
                 <div class="navbar">
-                    <h2>Cadastro</h2>
+                    <h2>Update</h2>
                     <div class="hr">
                         <hr>
                     </div>
                 </div>
                 <div class="input">
-                    <input type="text" name="nome" id="nome" placeholder="Digite nome Cliente">
+                    <input type="text" name="nome" id="nome" placeholder="Digite nome Cliente" value="<%= cliente.nome %>">
                 </div>
                 <div class="input">
-                    <input type="text" name="cpf" placeholder="Digite cpf Cliente">
+                    <input type="text" name="cpf" placeholder="Digite cpf Cliente" value="<%= cliente.cpf %>">
                 </div>
                 <div class="input">
-                    <input type="text" name="telefone" placeholder="Digite telefone">
+                    <input type="text" name="telefone" placeholder="Digite telefone" value="<%= cliente.telefone %>">
                 </div>
                 <div class="input">
-                    <input type="text" name="email" placeholder="Digite Email">
+                    <input type="text" name="email" placeholder="Digite Email" value="<%= cliente.email %>">
                 </div>
                 <div class="datanascimento">
                     <select name="dia">
@@ -61,7 +61,7 @@
                     </select>
                 </div>
                 <div class="input">
-                    <button>Cadastrar-se</button>
+                    <button>Update</button>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ router.post("/cadastroCliente", (req, res) => {
         cpf_form = req.body.cpf,
         telefone_form = req.body.telefone,
         email_form = req.body.email,
-        dataNascimento_form = "11-11-2005";
+        dataNascimento_form = req.body.ano + "-" + req.body.mes + "-" + req.body.dia;
         cliente.create({
             nome : nome_form,
             cpf : cpf_form,
@@ -20,5 +20,17 @@ router.post("/cadastroCliente", (req, res) => {
         }).then(() => {
             res.redirect("/")
         });
+});
+router.get("/tabela", (req, res)=>{
+    cliente.findAll().then((clientes)=>{
+        res.render("tabela", {client : clientes});
+    });
+});
+
+router.get("/editar/:id", (req, res)=>{
+    let id = req.params.id;
+    cliente.findByPk(id).then((clientes)=>{
+        res.render("editar", {cliente : clientes})
+    });
 });
 module.exports = router;
