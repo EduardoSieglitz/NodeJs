@@ -17,8 +17,8 @@
                 <th>Telefone</th>
                 <th>Email</th>
                 <th>Data Nascimento</th>
-                <th>Editar</th>
-                <th>Deletar</th>
+                <th></th>
+                <th></th>
             </tr>
             <% client.forEach((clientes)=>{ %>
                 <tr>
@@ -37,12 +37,16 @@
                     <th>
                         <%= clientes.datanascimento %>
                     </th>
-                    <th><a href="editar/<%= clientes.id %>">Editar</a></th>
-                    <th><a href="/deletar">Deletar</a></th>
+                    <th><a class="edita" href="editar/<%= clientes.id %>">Editar</a></th>
+                    <form action="/deletar" method="post">
+                        <th><button><a class="deleta">Deletar</a></button></th>
+                            <input type="hidden" name="id" value="<%= clientes.id %>">
+                    </form>
                     <% }); %>
                 </tr>
         </table>
     </div>
+    <a href="/"><button>Voltar</button></a>
 </body>
 
 </html>

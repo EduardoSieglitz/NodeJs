@@ -28,5 +28,5 @@ cliente = conexao.define("tb_cliente",{
         allowNull : false,
     },
 });
-cliente.sync();
+//cliente.sync();
 module.exports = cliente;

@@ -18,8 +18,9 @@
                         <hr>
                     </div>
                 </div>
+                <input type="hidden" name="id" value="<%= cliente.id %>">
                 <div class="input">
-                    <input type="text" name="nome" id="nome" placeholder="Digite nome Cliente" value="<%= cliente.nome %>">
+                    <input type="text" name="nome"placeholder="Digite nome Cliente" value="<%= cliente.nome %>">
                 </div>
                 <div class="input">
                     <input type="text" name="cpf" placeholder="Digite cpf Cliente" value="<%= cliente.cpf %>">
@@ -33,7 +34,7 @@
                 <div class="datanascimento">
                     <select name="dia">
                         <script>
-                            for (var d = 31; d >= 1; d--) {
+                            for (var d = 1; d <= 31; d++) {
                                 document.write("<option>" + d + "</option>")
                             }
                         </script>

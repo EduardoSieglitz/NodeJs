@@ -5,8 +5,6 @@ usuario = require("./CadastroCliente/tb_cliente"),
 usuariocontrole = require("./CadastroCliente/controleCliente"), 
 react = require("react");
 
-
-
 conexao.authenticate().then(()=>{
     console.log("Conexao")
 }).catch((msg)=>{
