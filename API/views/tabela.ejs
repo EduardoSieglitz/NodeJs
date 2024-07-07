@@ -1,0 +1,106 @@
+<<<<<<< HEAD:API/views/tabela.ejs
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="tabela.css">
+</head>
+
+<body>
+    <div class="container">
+        <table border="1px">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Data Nascimento</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <% client.forEach((clientes)=>{ %>
+                <tr>
+                    <th>
+                        <%= clientes.nome %>
+                    </th>
+                    <th>
+                        <%= clientes.cpf %>
+                    </th>
+                    <th>
+                        <%= clientes.telefone %>
+                    </th>
+                    <th>
+                        <%= clientes.email %>
+                    </th>
+                    <th>
+                        <%= clientes.datanascimento %>
+                    </th>
+                    <th><a class="edita" href="editar/<%= clientes.id %>">Editar</a></th>
+                    <form action="/deletar" method="post">
+                        <th><button><a class="deleta">Deletar</a></button></th>
+                        <input type="hidden" name="id" value="<%= clientes.id %>">
+                    </form>
+                    <% }); %>
+                </tr>
+        </table>
+    </div>
+    <a href="/home"><button>Voltar</button></a>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="tabela.css">
+</head>
+
+<body>
+    <div class="container">
+        <table border="1px">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Data Nascimento</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <% client.forEach((clientes)=>{ %>
+                <tr>
+                    <th>
+                        <%= clientes.nome %>
+                    </th>
+                    <th>
+                        <%= clientes.cpf %>
+                    </th>
+                    <th>
+                        <%= clientes.telefone %>
+                    </th>
+                    <th>
+                        <%= clientes.email %>
+                    </th>
+                    <th>
+                        <%= clientes.datanascimento %>
+                    </th>
+                    <th><a class="edita" href="editar/<%= clientes.id %>">Editar</a></th>
+                    <form action="/deletar" method="post">
+                        <th><button><a class="deleta">Deletar</a></button></th>
+                            <input type="hidden" name="id" value="<%= clientes.id %>">
+                    </form>
+                    <% }); %>
+                </tr>
+        </table>
+    </div>
+    <a href="/"><button>Voltar</button></a>
+</body>
+
+>>>>>>> aa1c9eba4d0b61081bbbc912abb7dcb9a1f14cf3:React/views/tabela.ejs
+</html>
