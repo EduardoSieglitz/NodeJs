@@ -52,19 +52,13 @@ body {
     color: black;
 }
 
-.login {
-    width: 13vw;
-    display: flex;
-    justify-content: center;
-}
-
 .cadastro {
     width: 13vw;
     display: flex;
     justify-content: center;
 }
 
-.tabela {
+.login {
     width: 13vw;
     display: flex;
     justify-content: center;

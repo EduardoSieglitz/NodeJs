@@ -11,7 +11,7 @@ cliente = conexao.define("tb_cliente",{
         type: sequelize.STRING,
         allowNull : false,
     },
-    cpf:{
+    senha:{
         type: sequelize.STRING,
         allowNull : false,
     },
@@ -28,5 +28,5 @@ cliente = conexao.define("tb_cliente",{
         allowNull : false,
     },
 });
-//cliente.sync();
+cliente.sync();
 module.exports = cliente;
