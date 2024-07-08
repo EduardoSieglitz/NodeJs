@@ -6,9 +6,10 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(253, 254, 255);
+    height: 90vh;
+    background-color: #f0f2f5;
+    padding: 0;
+    margin: 0;
 }
 
 .container {

@@ -13,30 +13,27 @@
         <table border="1px">
             <tr>
                 <th>Nome</th>
-                <th>Senha</th>
-                <th>Telefone</th>
                 <th>Email</th>
+                <th>Senha</th>
                 <th>Data Nascimento</th>
                 <th></th>
                 <th></th>
             </tr>
             <% client.forEach((clientes)=>{ %>
                 <tr>
-                    <th>
+                    <td>
                         <%= clientes.nome %>
-                    </th>
-                    <th>
-                        <%= clientes.senha %>
-                    </th>
-                    <th>
-                        <%= clientes.telefone %>
-                    </th>
-                    <th>
+                    </td>
+                    <td>
                         <%= clientes.email %>
-                    </th>
-                    <th>
+                    </td>
+                    <td>
+                        <%= clientes.senha %>
+                    </td>
+                    
+                    <td>
                         <%= clientes.datanascimento %>
-                    </th>
+                    </td>
                     <th><a class="edita" href="editar/<%= clientes.id %>">Editar</a></th>
                     <form action="/deletar" method="post">
                         <th><button><a class="deleta">Deletar</a></button></th>
@@ -46,6 +43,7 @@
                 </tr>
         </table>
     </div>
+    <a href="/"><button>Voltar</button></a>
 </body>
 
 </html>

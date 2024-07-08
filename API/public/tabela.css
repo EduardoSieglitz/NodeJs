@@ -2,14 +2,13 @@
 
 * {
     font-family: 'Poppins', Arial, sans-serif;
-    overflow: hidden;
 }
 
 body {
     text-align: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(253, 254, 255);
+    background-color: #f0f2f5;
 }
 
 .container {
@@ -29,6 +28,10 @@ body {
             text-decoration: underline;
     }
 
+    th, td {
+        background-color: #fff;
+    }
+
     th button {
         border: none;
         background: none;
@@ -46,4 +49,21 @@ body {
             cursor: pointer;
         }
     }
+}
+
+a button {
+    background-color: #673DE6;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    height: 36px;
+    padding: 0 32px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+a button:hover {
+    opacity: 0.7;
 }

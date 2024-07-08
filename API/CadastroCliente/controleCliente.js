@@ -25,13 +25,11 @@ router.post("/update", (req, res) => {
     var id = req.body.id,
         nome_form = req.body.nome,
         senha_form = req.body.senha,
-        telefone_form = req.body.telefone,
         email_form = req.body.email,
         dataNascimento_form = req.body.ano + "-" + req.body.mes + "-" + req.body.dia;
     cliente.update({
         nome: nome_form,
         senha: senha_form,
-        telefone: telefone_form,
         email: email_form,
         datanascimento: dataNascimento_form
     },

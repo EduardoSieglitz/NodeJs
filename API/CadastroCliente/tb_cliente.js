@@ -15,10 +15,6 @@ cliente = conexao.define("tb_cliente",{
         type: sequelize.STRING,
         allowNull : false,
     },
-    telefone:{
-        type: sequelize.STRING,
-        allowNull : false,
-    },
     email:{
         type: sequelize.STRING,
         allowNull : false,
