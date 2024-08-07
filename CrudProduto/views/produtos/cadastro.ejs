@@ -1,0 +1,22 @@
+<%- include ("../partials/header.ejs") %>
+
+    <div class="container">
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <h2>Cadastro de Produto</h2>
+            </div>
+            <div class="card-body">
+                <form action="cadastroProduto" method="post">
+                    Nome Produto <br>
+                    <input type="text" class="form-control" name="nome">
+                    Categoria <br>
+                    <input type="text" class="form-control" name="categoria">
+                    Preço Produto <br>
+                    <input type="text" class="form-control" name="preco">
+                    <br>
+                    <button class="btn btn-success">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>

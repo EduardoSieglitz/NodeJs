@@ -1,0 +1,60 @@
+<%- include ("../partials/header.ejs") %>
+
+    <div class="container">
+        <hr>
+        <div align="center">
+            <h2>Lista de Produto</h2>
+            <a class="btn btn-success" href="telaCadastro">Cadastro Novo Produto</a>
+        </div>
+        <hr>
+        <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nome</td>
+                        <td>Categoria</td>
+                        <td>Preço</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% produtos.forEach((produto)=>{ %>
+                    <tr>
+                        <td>
+                            <%= produto.id_produto %>
+                        </td>
+                        <td>
+                            <%= produto.nome %>
+                        </td>
+                        <td>
+                            <%= produto.categoria %>
+                        </td>
+                        <td>
+                            <%= produto.preco %>
+                        </td>
+                        <td>
+                            <a href="editaProduto/<%= produto.id_produto  %>" class="btn btn-warning">Editar</a>
+                        </td>
+                        <td>
+                            <form method="POST" action="deletaProduto" style="display: inline"
+                                onsubmit="confirmaDeleta(event,this)">
+                                <input type="hidden" name="id" value="<%= produto.id_produto  %>" />
+                                <button class="btn btn-danger">Deletar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+        </table>
+            <div align="center">
+                <a class="btn btn-warning" href="/">Voltar Menu</a>
+            </div>
+    </div>
+    <script>
+        function confirmaDeleta(event, form) {
+          event.preventDefault();
+          var decisao = confirm("Confirma Exclusão ?");
+          if (decisao) {
+            form.submit();
+          }
+        }
+      </script>

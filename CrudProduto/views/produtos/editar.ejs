@@ -1,0 +1,23 @@
+<%- include ("../partials/header.ejs") %>
+
+    <div class="container">
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <h2>Editar de Produto</h2>
+            </div>
+            <div class="card-body">
+                <form action="/updateProduto" method="post">
+                    Editar Nome Produto <br>
+                    <input type="text" class="form-control" name="nome" value="<%= produtos.nome %>">
+                    Editar Categoria <br>
+                    <input type="text" class="form-control" name="categoria" value="<%= produtos.categoria %>">
+                    Editar Preço Produto <br>
+                    <input type="text" class="form-control" name="preco" value="<%= produtos.preco %>">
+                    <br>
+                    <input type="hidden" name="id" value="<%= produtos.id_produto %>" />
+                    <button class="btn btn-success">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
