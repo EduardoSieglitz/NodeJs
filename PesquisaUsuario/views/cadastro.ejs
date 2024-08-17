@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+        <form action="/cadastrar" method="post">
+            <div class="container">
+                <div class="cabeçario">
+                    <h1>Cadastro de Usuario</h1>
+                </div>
+                <div class="Nome">
+                    <input type="text" name="email" placeholder="Digite Email">
+                </div>
+                <div class="Email">
+                    <input type="text" name="nome" placeholder="Digite Nome">
+                </div>
+                <button class="b">Cadastrar</button>
+                <div>
+                    <form action="links" method="post">
+                        <input  type="hidden" name="link" value="1">
+                        <button class="link">voltar</button>
+                    </form>
+                </div>
+            </div>
+        </form>
+</body>
+
+</html>
