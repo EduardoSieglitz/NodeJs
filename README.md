@@ -1,2 +1,8 @@
-Node.js Project
-Este repositório contém um projeto desenvolvido com Node.js, uma plataforma de desenvolvimento baseada em JavaScript que permite a criação de aplicações escaláveis e de alta performance. O objetivo deste projeto é [descreva o objetivo do seu projeto, por exemplo: "desenvolver uma API RESTful", "criar um servidor web simples", "automatizar tarefas", etc.].
+Node.js 
+Este repositório contém um projeto desenvolvido com Node.js, utilizando o framework Express e o motor de templates EJS. O objetivo deste repositorio é aperfeiçoar os conhecimentos, como autenticação, validação, HTTP. A combinação de Express e EJS permite a criação de aplicações web rápidas e flexíveis, com templates dinâmicos renderizados no servidor.
+
+Funcionalidades
+Renderização Dinâmica: Utilização de EJS para renderizar páginas HTML dinamicamente.
+Roteamento Simples: Implementação de rotas HTTP com Express para gerenciar diferentes páginas e funcionalidades.
+Middlewares: Uso de middlewares para manipulação de dados de requisição e resposta.
+Layouts Reutilizáveis: Estrutura de templates EJS que facilita a criação de layouts consistentes em todo o site.
