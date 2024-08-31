@@ -1,0 +1,18 @@
+<%- include ("partials/header.ejs") %>
+  <div class="container">
+    <h2 align="center">Envio de Imagens - 354 - Eduardo Sieglitz</h2>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <form action="cadastrar" method="post" enctype="multipart/form-data">
+          Nome Produto:
+          <input type="text" name="nome" class="form-control" />
+          Valor Produto:
+          <input type="text" name="valor" class="form-control" />
+          <br />
+          <input type="file" name="imagem" class="form-control" />
+          <br />
+          <input type="submit" class="btn btn-primary" value="Cadastrar" />
+        </form>
+      </div>
+    </div>
+  </div>
